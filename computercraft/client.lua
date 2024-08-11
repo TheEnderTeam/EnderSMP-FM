@@ -5,4 +5,3 @@ while true do -- Loop
  local msg = tostring(wsmsg) -- Stringify
  chatBox.sendMessage(msg) -- chat
 end
-ws.close()
