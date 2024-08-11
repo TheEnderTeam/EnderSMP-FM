@@ -4,7 +4,7 @@ while true do -- Loop
  local wsmsg = ws.receive() -- Read from WS
  local msg = tostring(wsmsg) -- Stringify
  print(msg) -- print song name
- wait(20) -- wait
+ sleep(5) -- wait
 end
  
 chatBox.sendMessage(msg) -- chat
