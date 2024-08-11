@@ -1,8 +1,6 @@
 ws = http.websocket("ws://localhost:5656") -- ws server
-local wsmsg = io.open("test.lua", "r")
-io.input(wsmsg)
-local msg = tostring(io.read(wsmsg)) -- stringify
-io.close(wsmsg)
+local wsmsg = http.get("https://google.com/") -- http get request
+local msg = tostring(wsmsg) -- stringify
 
 ws.send(msg) -- send
 ws.close()
