@@ -1,6 +1,8 @@
-local chatBox = peripheral.find("chatBox")
-ws = http.websocket("ws://localhost:5656")
-local wsmsg = ws.receive()
-local msg = tostring(wsmsg)
+local chatBox = peripheral.find("chatBox") -- Chatbox define
+ws = http.websocket("ws://localhost:5656") -- Websocket URL
+while true do -- Loop
+ local wsmsg = ws.receive() -- Read from WS
+ local msg = tostring(wsmsg) -- Stringify
+end
  
-chatBox.sendMessage(msg)
+chatBox.sendMessage(msg) -- chat
