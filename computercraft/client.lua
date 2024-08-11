@@ -5,4 +5,5 @@ while true do -- Loop
  local msg = tostring(wsmsg) -- Stringify
  print(msg) -- print song name
  chatBox.sendMessage(msg) -- chat
+ ws.close()
 end
