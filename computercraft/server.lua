@@ -1,8 +1,5 @@
-local chatBox = peripheral.find("chatBox")
-ws = http.websocket("ws://localhost:5656")
+ws = http.websocket("ws://localhost:5656") -- ws server
+local wsmsg = io.open(currentsong.txt, "r") -- find current song
+local msg = tostring(wsmsg) -- stringify
 
-while true do
- local wsmsg = io.open(currentsong.txt, "r")
- local msg = tostring(wsmsg)
- ws.send(msg)
-end
+ws.send(msg) -- send
